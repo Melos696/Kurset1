@@ -3,4 +3,4 @@ from .models import Kurs
 
 def lista_kurseve(request):
     kurset = Kurs.objects.all()
-    return render(request, 'kurse/lista.html', {'kurset': kurset})
+    return render(request, 'lista.html',{'kurset': kurset})

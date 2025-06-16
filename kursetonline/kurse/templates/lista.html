@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="sq">
 <head>
+    <meta charset="UTF-8">
     <title>Lista e Kurseve</title>
 </head>
 <body>
     <h1>Kurset Online</h1>
-    <ul>
-        {% for kurs in kurset %}
-        <li>
-            <h2>{{ kurs.titulli }}</h2>
-            <p>{{ kurs.pershkrimi }}</p>
-            <p>Data e fillimit: {{ kurs.data_fillimit }}</p>
-            <p>Cmimi: {{ kurs.cmimi }} €</p>
-        </li>
-        {% endfor %}
-    </ul>
+
+    {% if kurset %}
+        <ul>
+            {% for kurs in kurset %}
+                <li>
+                    <h2>{{ kurs.titulli }}</h2>
+                    <p>{{ kurs.pershkrimi }}</p>
+                    <p>Data e fillimit: {{ kurs.data_fillimit }}</p>
+                    <p>Cmimi: {{ kurs.cmimi }} €</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Asnje kurs nuk eshte i disponueshem per momentin.</p>
+    {% endif %}
 </body>
 </html>
