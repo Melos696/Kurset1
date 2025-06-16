@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista e Kurseve</title>
+</head>
+<body>
+    <h1>Kurset Online</h1>
+    <ul>
+        {% for kurs in kurset %}
+        <li>
+            <h2>{{ kurs.titulli }}</h2>
+            <p>{{ kurs.pershkrimi }}</p>
+            <p>Data e fillimit: {{ kurs.data_fillimit }}</p>
+            <p>Cmimi: {{ kurs.cmimi }} €</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
